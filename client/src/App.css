@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font: Arial, sans-serif;
+}
+h1 {
+  color: lightslategray;
+}
+.form1 {
+  margin: 20px;
+  width: 500px;
+  text-align: left;
+  display: inline-block;
+}
+
+textarea {
+  font-family: 'Arial', Times, serif;
+}
+
+.titulo1 {
+  font-size: 22px;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+.form1 span {
+  font-weight: bold;
+  width: 80px;
+  display: inline-block;
+}
+
+.form1 input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 360px;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+
+.form1 input[type='number'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 360px;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+
+.campo1 {
+  margin: 20px;
+}
+#campo_menor {
+  width: 150px;
+}
+#descricao {
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 360px;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #3e8bce;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 4px 10px;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+}
+.Botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  height: 180px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#updateInput {
+  width: 100px;
+  height: 20px;
+  margin-bottom: 10px;
+  margin: 10px;
+}
