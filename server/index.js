@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/api/get', (req, res) => {
-  const sqlSelect = 'SELECT * FROM produtos ORDER BY valor DESC'
+  const sqlSelect = 'SELECT * FROM produtos ORDER BY nome'
   db.query(sqlSelect, (err, result) => {
     res.send(result)
   })

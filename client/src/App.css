@@ -3,9 +3,14 @@
   padding: 20px;
   font: Arial, sans-serif;
 }
-h1 {
-  color: lightslategray;
+h1,
+p {
+  color: rgb(8, 54, 70);
+  font-size: large;
+  font-weight: bold;
+  margin: 1%;
 }
+
 .form1 {
   margin: 20px;
   width: 500px;
@@ -73,6 +78,7 @@ button {
   width: 100px;
   margin: 0 auto;
 }
+
 .Botao {
   display: flex;
   align-items: center;
@@ -80,11 +86,12 @@ button {
 }
 
 .card {
-  width: 500px;
-  height: 180px;
+  width: 350px;
+  height: auto;
   border: 2px solid black;
   border-radius: 15px;
   margin: 10px;
+  padding: 0.5%;
 }
 
 #updateInput {
@@ -92,4 +99,33 @@ button {
   height: 20px;
   margin-bottom: 10px;
   margin: 10px;
+}
+
+.btDeletar {
+  border-radius: 8px;
+  font-weight: 500;
+  background: #d35449;
+  color: #fff;
+}
+
+.btAtualizar {
+  border-radius: 8px;
+  font-weight: 500;
+  background: #3e8bce;
+  color: #fff;
+}
+
+.listaProdutos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Flex Item */
+.card {
+  margin: 5px;
+  text-align: center;
+  font-size: 1.5em;
 }

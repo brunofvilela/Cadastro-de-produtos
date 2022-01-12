@@ -103,36 +103,41 @@ function App() {
       <hr></hr>
 
       <h1>Listagem dos produtos: </h1>
-      {produtosList.map(val => {
-        return (
-          <div className="card">
-            <h1>{val.nome}</h1>
-            <p>R$ {val.valor}</p>
+      <section class="listaProdutos">
+        {produtosList.map(val => {
+          return (
+            <div className="card">
+              <h1>Nome: {val.nome}</h1>
+              <p>Marca: {val.descricao}</p>
+              <p>Valor: R$ {val.valor}</p>
 
-            <button
-              onClick={() => {
-                deleteProdut(val.nome)
-              }}
-            >
-              Deletar
-            </button>
-            <input
-              type="text"
-              id="updateInput"
-              onChange={e => {
-                setNovoValor(e.target.value)
-              }}
-            />
-            <button
-              onClick={() => {
-                updateProdut(val.nome)
-              }}
-            >
-              Atualizar valor
-            </button>
-          </div>
-        )
-      })}
+              <button
+                className="btDeletar"
+                onClick={() => {
+                  deleteProdut(val.nome)
+                }}
+              >
+                Deletar
+              </button>
+              <input
+                type="text"
+                id="updateInput"
+                onChange={e => {
+                  setNovoValor(e.target.value)
+                }}
+              />
+              <button
+                className="btAtualizar"
+                onClick={() => {
+                  updateProdut(val.nome)
+                }}
+              >
+                Atualizar valor
+              </button>
+            </div>
+          )
+        })}
+      </section>
     </div>
   )
 }
