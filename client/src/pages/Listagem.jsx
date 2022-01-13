@@ -13,13 +13,13 @@ function Listagem() {
     })
   })
 
-  const deleteProdut = pnome => {
-    Axios.delete(`http://localhost:3001/api/delete/${pnome}`)
+  const deleteProdut = pidprodutos => {
+    Axios.delete(`http://localhost:3001/api/delete/${pidprodutos}`)
   }
 
-  const updateProdut = pnome => {
+  const updateProdut = pidprodutos => {
     Axios.put('http://localhost:3001/api/update', {
-      nome: pnome,
+      idprodutos: pidprodutos,
       valor: novoValor
     })
     setNovoValor('')
@@ -28,7 +28,7 @@ function Listagem() {
   return (
     <>
       <h1>Listagem dos produtos: </h1>
-      <section class="listaProdutos">
+      <section className="listaProdutos">
         {produtosList.map(val => {
           return (
             <div className="card">
@@ -39,7 +39,7 @@ function Listagem() {
               <Button
                 className="btDeletar"
                 onClick={() => {
-                  deleteProdut(val.nome)
+                  deleteProdut(val.idprodutos)
                 }}
               >
                 Deletar
@@ -54,7 +54,7 @@ function Listagem() {
               <Button
                 className="btAtualizar"
                 onClick={() => {
-                  updateProdut(val.nome)
+                  updateProdut(val.idprodutos)
                 }}
               >
                 Atualizar valor

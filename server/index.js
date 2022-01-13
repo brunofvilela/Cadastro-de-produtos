@@ -36,19 +36,19 @@ app.post('/api/insert', (req, res) => {
   })
 })
 
-app.delete('/api/delete/:nome', (req, res) => {
-  const pnome = req.params.nome
-  const sqlDelete = 'DELETE FROM produtos WHERE nome = ?'
-  db.query(sqlDelete, pnome, (err, result) => {
+app.delete('/api/delete/:idprodutos', (req, res) => {
+  const pidprodutos = req.params.idprodutos
+  const sqlDelete = 'DELETE FROM produtos WHERE idprodutos = ?'
+  db.query(sqlDelete, pidprodutos, (err, result) => {
     if (err) console.log(err)
   })
 })
 
 app.put('/api/update', (req, res) => {
-  const pnome = req.body.nome
+  const pidprodutos = req.body.idprodutos
   const pvalor = req.body.valor
-  const sqlUpdate = 'UPDATE produtos SET valor = ? WHERE nome = ?'
-  db.query(sqlUpdate, [pvalor, pnome], (err, result) => {
+  const sqlUpdate = 'UPDATE produtos SET valor = ? WHERE idprodutos = ?'
+  db.query(sqlUpdate, [pvalor, pidprodutos], (err, result) => {
     if (err) console.log(err)
   })
 })
